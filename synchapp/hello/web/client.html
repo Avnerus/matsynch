@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="mobile-web-app-capable" content="yes">
+    </head>
+    <body>
+      <h1>Hello WAMP</h1>
+      <p>Open JavaScript console to watch output.</p>
+      <div id="output">
+      </div>
+      <script>AUTOBAHN_DEBUG = false ;</script>
+      <script src="http://autobahn.s3.amazonaws.com/autobahnjs/latest/autobahn.min.jgz"></script>
+
+      <script>
+         // the URL of the WAMP Router (Crossbar.io)
+         //
+         var wsuri;
+      //   if (document.location.origin == "file://") {
+            wsuri = "ws://10.0.0.1:8080/ws";
+    /*
+         } else {
+            wsuri = (document.location.protocol === "http:" ? "ws:" : "wss:") + "//" +
+                        document.location.host + "/ws";
+         }*/
+
+
+         // the WAMP connection to the Router
+         //
+         var connection = new autobahn.Connection({
+            url: wsuri,
+            realm: "realm1"
+         });
+
+         var bahnSession;
+
+
+         // fired when connection is established and session attached
+         //
+         connection.onopen = function (session, details) {
+
+            console.log("Connected");
+
+            bahnSession = session;
+
+            // SUBSCRIBE to a topic and receive events
+            //
+            function playNow (args) {
+                console.log("Play now!");                   
+                var player = document.getElementById("player");
+                player.play();
+            }
+            
+            session.subscribe('com.matsynch.playNow', playNow).then(
+               function (sub) {
+                  console.log('subscribed to topic');
+               },
+               function (err) {
+                  console.log('failed to subscribe to topic', err);
+               }
+            );
+
+
+            // CALL a remote procedure
+
+
+           session.call('com.example.add2', [2, 18]).then(
+              function (res) {
+                 console.log("add2() result:", res);
+              },
+              function (err) {
+                 console.log("add2() error:", err);
+              }
+           );
+         }
+
+         // fired when connection was lost (or could not be established)
+         //
+         connection.onclose = function (reason, details) {
+            console.log("Connection lost: " + reason);
+         }
+
+
+         // now actually open the connection
+         //
+         connection.open();
+
+
+         function nowClicked() {
+            bahnSession.call('com.example.add2', [2, 18]).then(
+               function (res) {
+                  console.log("add2() result:", res);
+               },
+               function (err) {
+                  console.log("add2() error:", err);
+               }
+            );
+         }
+
+
+         window.onload = function() {
+            console.log("Page loaded. going full screen redirecting"); 
+            //document.documentElement.webkitRequestFullscreen();
+         }
+
+      </script>
+     <video width="400px" height="400px" preload="auto" autobuffer id="player" controls>
+         <!--source src="http://clips.vorwaerts-gmbh.de/VfE.webm"-->
+        <source src="http://10.0.0.1:8000/pirates.webm">
+      <!--source src="file:///mnt/sdcard/Movies/pirates.webm"-->
+      <!--source src="file:///home/avnerus/Projects/matsynch/synchapp/hello/web/open_mouth.mp4" type="video/mp4"-->
+    Your browser does not support the video tag.
+    </video> 
+    </body>
+</html>

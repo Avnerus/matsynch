@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="mobile-web-app-capable" content="yes">
+    </head>
+    <body>
+      <h1>Redirect WAMP</h1>
+      <p>Open JavaScript console to watch output.</p>
+      <div id="output">
+      </div>
+      <script>AUTOBAHN_DEBUG = false ;</script>
+
+      <script>
+         window.onload = function() {
+            console.log("Page loaded. going full screen redirecting"); 
+            window.location = "file:///mnt/sdcard/Movies/client.html"
+         }
+
+      </script>
+    </body>
+</html>
