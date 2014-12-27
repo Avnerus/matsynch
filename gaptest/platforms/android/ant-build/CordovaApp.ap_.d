@@ -36,7 +36,11 @@
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/spec \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/js \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/img \
+/home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/plugins/com.phonegap.plugins.video \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/plugins/com.knowledgecode.cordova.websocket \
+/home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/plugins/com.phonegap.plugins.video/3.0.0 \
+/home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/plugins/com.phonegap.plugins.video/3.0.0/www \
+/home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/plugins/com.phonegap.plugins.video/3.0.0/www/video.js \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/plugins/com.knowledgecode.cordova.websocket/www \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/plugins/com.knowledgecode.cordova.websocket/www/websocket.js \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/css/index.css \

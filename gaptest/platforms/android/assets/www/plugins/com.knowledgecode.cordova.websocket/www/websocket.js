@@ -197,12 +197,8 @@ cordova.define("com.knowledgecode.cordova.websocket.websocket", function(require
                 return id;
             };
             listeners[id] = {};
-            console.log("CREATE WS");
 
             exec(function (data) {
-                console.log("DATA!! " + JSON.stringify(data));
-                console.log(data);
-                console.log(data[0]);
                 switch (data[0]) {
                 case 'O':
                     taskQueue.push(function () {

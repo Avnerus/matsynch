@@ -57,7 +57,7 @@ class BroadcastServerFactory(WebSocketServerFactory):
 
    def tick(self):
       self.tickcount += 1
-      self.broadcast("tick %d from server" % self.tickcount)
+      #self.broadcast("tick %d from server" % self.tickcount)
       reactor.callLater(1, self.tick)
 
    def register(self, client):

@@ -57,6 +57,7 @@ var app = {
         socket.onmessage = function (event) {
             console.log("MESSAGE!!");
             console.log(event.data);    // will be "hello"
+            window.plugins.videoPlayer.play("file:///mnt/sdcard/Movies/pirates.webm");
         };
     }
 

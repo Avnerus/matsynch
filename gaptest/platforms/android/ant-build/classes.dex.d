@@ -13,6 +13,7 @@
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/ant-build/classes/com/knowledgecode/cordova/websocket/DisconnectionTask.class \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/ant-build/classes/com/knowledgecode/cordova/websocket/AbstractWebSocket.class \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/ant-build/classes/com/knowledgecode/cordova/websocket/ConnectionTask$2.class \
+/home/avnerus/Projects/matsynch/gaptest/platforms/android/ant-build/classes/com/phonegap/plugins/video/VideoPlayer.class \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/ant-build/classes/com/phonegap/helloworld/R.class \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/ant-build/classes/com/phonegap/helloworld/R$xml.class \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/ant-build/classes/com/phonegap/helloworld/BuildConfig.class \
