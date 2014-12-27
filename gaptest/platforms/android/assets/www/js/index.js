@@ -34,6 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        app.connectToSocket();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -45,5 +46,18 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    connectToSocket: function() {
+        console.log("Connecting to socket!");
+        var socket = new WebSocket("ws://10.0.0.1:9000");
+        console.log(JSON.stringify(socket));
+        socket.onerror = function(evt) { console.log("ERROR!" + evt) };
+        socket.onopen = function(evt) { console.log("OPEN!" + evt) };
+        socket.onmessage = function (event) {
+            console.log("MESSAGE!!");
+            console.log(event.data);    // will be "hello"
+        };
     }
+
 };
