@@ -52,6 +52,15 @@
             }
          };
 
+        function back() {
+           var msg = "back";
+           if (sock) {
+              sock.send(msg);
+              log("Sent: " + msg);
+           } else {
+              log("Not connected.");
+           }
+        }
 
          function playMovie(name) {
             var msg = name;
@@ -88,6 +97,9 @@
     <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
     <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
     <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-      <pre id="log" style="height: 20em; overflow-y: scroll; background-color: #faa;"></pre>
+      <div>
+        <button id="back-button" onclick="back();" type="button">BACK</button>
+      </div>
+    <pre id="log" style="height: 20em; overflow-y: scroll; background-color: #faa;"></pre>
    </body>
 </html>

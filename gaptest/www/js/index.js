@@ -50,7 +50,12 @@ var app = {
         socket.onmessage = function (event) {
             console.log("MESSAGE!!");
             console.log(event.data);    // will be "hello"
-            window.plugins.videoPlayer.play("file:///mnt/sdcard/Movies/" + event.data + ".mp4");
+            if (event.data == "back") {
+                console.log("Press back!");
+                navigator.app.backHistory()
+            } else {
+                window.plugins.videoPlayer.play("file:///mnt/sdcard/Movies/" + event.data + ".mp4");
+            }
         };
     }
 
