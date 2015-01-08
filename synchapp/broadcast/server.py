@@ -35,7 +35,7 @@ class BroadcastServerProtocol(WebSocketServerProtocol):
 
    def onMessage(self, payload, isBinary):
       if not isBinary:
-         msg = "{} from {}".format(payload.decode('utf8'), self.peer)
+         msg = "{}".format(payload.decode('utf8'))
          self.factory.broadcast(msg)
 
    def connectionLost(self, reason):

@@ -38,13 +38,6 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
         console.log('Received Event: ' + id);
     },
 
@@ -57,7 +50,7 @@ var app = {
         socket.onmessage = function (event) {
             console.log("MESSAGE!!");
             console.log(event.data);    // will be "hello"
-            window.plugins.videoPlayer.play("file:///mnt/sdcard/Movies/pirates.webm");
+            window.plugins.videoPlayer.play("file:///mnt/sdcard/Movies/" + event.data + ".mp4");
         };
     }
 

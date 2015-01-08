@@ -115,4 +115,5 @@
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/spec/lib/jasmine-1.2.0/jasmine.css \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/js/index.js \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/img/logo.png \
+/home/avnerus/Projects/matsynch/gaptest/platforms/android/assets/www/img/wallpaper.jpg \
 /home/avnerus/Projects/matsynch/gaptest/platforms/android/ant-build/AndroidManifest.xml \

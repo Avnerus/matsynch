@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <link rel="stylesheet" href="style.css">
       <script type="text/javascript">
          var sock = null;
          var ellog = null;
@@ -51,6 +52,17 @@
             }
          };
 
+
+         function playMovie(name) {
+            var msg = name;
+            if (sock) {
+               sock.send(msg);
+               log("Sent: " + msg);
+            } else {
+               log("Not connected.");
+            }
+         }
+
          function log(m) {
             ellog.innerHTML += m + '\n';
             ellog.scrollTop = ellog.scrollHeight;
@@ -58,12 +70,24 @@
       </script>
    </head>
    <body>
-      <h1>Autobahn WebSocket Broadcast Demo</h1>
-      <noscript>You must enable JavaScript</noscript>
-      <form>
-         <p>Broadcast Message: <input id="message" type="text" size="50" maxlength="50" value="Hello from Browser!"></p>
-      </form>
-      <button onclick='broadcast();'>Broadcast Message</button>
+    <h1>STORYANDGAME ACTIVATOR</h1>
+    <noscript>You must enable JavaScript</noscript>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('castle')" type="button">CASTLE</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
       <pre id="log" style="height: 20em; overflow-y: scroll; background-color: #faa;"></pre>
    </body>
 </html>
