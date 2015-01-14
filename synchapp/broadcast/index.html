@@ -28,7 +28,8 @@
 
             if (sock) {
                sock.onopen = function() {
-                  log("Connected to " + wsuri);
+                  log("Connected to server " + wsuri);
+                  log("You can now logon with tablets")
                }
 
                sock.onclose = function(e) {
@@ -79,24 +80,21 @@
       </script>
    </head>
    <body>
-    <h1>STORYANDGAME ACTIVATOR</h1>
+     <h1>STORYANDGAME ACTIVATOR</h1>
     <noscript>You must enable JavaScript</noscript>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirate')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('pirate_ins')" type="button">PIRATES INSTRUCTIONS</button>
     <button id="movie-button" onclick="playMovie('castle')" type="button">CASTLE</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
-    <button id="movie-button" onclick="playMovie('pirates')" type="button">PIRATES</button>
+    <button id="movie-button" onclick="playMovie('castle_ins')" type="button">CASTLE INSTRUCTIONS </button>
+    <button id="movie-button" onclick="playMovie('monkeys')" type="button">MONKEYS</button>
+    <button id="movie-button" onclick="playMovie('monkeys_ins')" type="button">MONKEYS INSTRUCTIONS </button>
+    <button id="movie-button" onclick="playMovie('socks')" type="button">SOCKS</button>
+    <button id="movie-button" onclick="playMovie('socks_ins')" type="button">SOCKS INSTRUCTIONS </button>
+    <button id="movie-button" onclick="playMovie('firemen')" type="button">FIREMEN</button>
+    <button id="movie-button" onclick="playMovie('firemen_ins')" type="button">FIREMEN INSTRUCTIONS </button>
+    <button id="movie-button" onclick="playMovie('cherry')" type="button">CHERRY TREE (RAVEN)</button>
+    <button id="movie-button" onclick="playMovie('cherry_ins')" type="button">CHERRY INSTRUCTIONS </button>
+    <button id="movie-button" onclick="playMovie('dreams')" type="button">DREAMS</button>
       <div>
         <button id="back-button" onclick="back();" type="button">BACK</button>
       </div>

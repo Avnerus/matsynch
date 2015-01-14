@@ -43,7 +43,7 @@ var app = {
 
     connectToSocket: function() {
         console.log("Connecting to socket!");
-        var socket = new WebSocket("ws://10.0.0.1:9000");
+        var socket = new WebSocket("ws://10.0.0.99:9000");
         console.log(JSON.stringify(socket));
         socket.onerror = function(evt) { console.log("ERROR!" + evt) };
         socket.onopen = function(evt) { console.log("OPEN!" + evt) };
